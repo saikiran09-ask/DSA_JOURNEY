@@ -1,0 +1,32 @@
+import java.util.*;
+
+class Main{
+  public static void main(String args[]){
+    //write your code here...
+    Scanner sc = new Scanner(System.in);
+    if(!sc.hasNextInt()){
+      return;
+    }
+    int n = sc.nextInt();
+    int temp = n;
+    int count = 0;
+    while(temp>0){
+      temp = temp/10;
+        count++;
+    }
+     temp = n;
+    int sum = 0;
+    while(temp>0){
+    int ls = temp%10;
+    sum = sum+(int) Math.pow(ls,count);
+    temp = temp/10;
+    }
+    if(sum==n){
+      System.out.println(1);
+    }
+    else{
+      System.out.println(0);
+    }
+    
+  }
+}
